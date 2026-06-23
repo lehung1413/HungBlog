@@ -175,8 +175,8 @@ export const DUMMY_POSTS: Post[] = [
 
 export const DUMMY_PROFILE: Profile = {
   id: 'dummy-profile',
-  full_name: { en: 'Nguyen Van Hung', vi: 'Nguyễn Văn Hùng' },
-  job_title: { en: 'Full-stack Developer', vi: 'Lập trình viên Full-stack' },
+  full_name: { en: 'Tom', vi: 'Lê Mạnh Hùng' },
+  job_title: { en: 'Full-stack Developer', vi: 'Full-stack Developer' },
   bio: {
     en: 'I build elegant web experiences with React, TypeScript, and cloud-native backends. Passionate about clean architecture, developer experience, and sharing knowledge through writing.\n\nWhen I\'m not coding, you\'ll find me exploring coffee shops, reading tech blogs, or contributing to open source.',
     vi: 'Tôi xây dựng trải nghiệm web tinh tế với React, TypeScript và backend cloud-native. Đam mê kiến trúc sạch, trải nghiệm developer và chia sẻ kiến thức qua viết lách.\n\nKhi không code, bạn sẽ thấy tôi khám phá quán cà phê, đọc blog công nghệ hoặc đóng góp open source.',
