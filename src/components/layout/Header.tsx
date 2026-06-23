@@ -196,7 +196,7 @@ export function Header() {
       >
         <Box sx={{ p: 3 }}>
           <Link to={localizedPath('/')} className="yaffo-logo" onClick={() => setDrawerOpen(false)}>
-            Hung's Blog
+            Tom's Blog
           </Link>
         </Box>
         <Divider />
