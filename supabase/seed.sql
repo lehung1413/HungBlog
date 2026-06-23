@@ -32,22 +32,49 @@ ON CONFLICT DO NOTHING;
 
 INSERT INTO experiences (company_name, position, start_date, end_date, description, achievements, sort_order) VALUES
   (
-    '{"en":"Tech Company","vi":"Công ty Công nghệ"}',
-    '{"en":"Senior Developer","vi":"Lập trình viên Senior"}',
-    '2022-01-01',
+    '{"en":"FPT Software","vi":"FPT Software"}',
+    '{"en":"Technical Lead","vi":"Technical Lead"}',
+    '2024-05-01',
     NULL,
-    '{"en":"Leading development of web applications.","vi":"Dẫn dắt phát triển ứng dụng web."}',
-    '[{"en":"Reduced load time by 40%","vi":"Giảm thời gian tải 40%"},{"en":"Mentored junior developers","vi":"Hướng dẫn lập trình viên junior"}]',
+    '{"en":"Project: Empower Health.","vi":"Project: Empower Health."}',
+    '[{"en":"Led modernization of the IVR application (legacy → IVR 2.0) by reverse-engineering business flows from source code with limited documentation, then redesigning the architecture","vi":"Led modernization of the IVR application (legacy → IVR 2.0) by reverse-engineering business flows from source code with limited documentation, then redesigning the architecture"},
+	{"en":"Defined Phase 2 solution to migrate Campaign 2.0 to a shared database with IVR; discussed and propose options with the client and guided implementation","vi":"Defined Phase 2 solution to migrate Campaign 2.0 to a shared database with IVR; discussed and propose options with the client and guided implementation"}]',
     1
   ),
   (
-    '{"en":"Startup Inc","vi":"Startup Inc"}',
+    '{"en":"Citizen Debt Services","vi":"Citizen Debt Services"}',
     '{"en":"Full-stack Developer","vi":"Lập trình viên Full-stack"}',
-    '2019-06-01',
-    '2021-12-31',
-    '{"en":"Built MVP products from scratch.","vi":"Xây dựng sản phẩm MVP từ đầu."}',
-    '[{"en":"Launched 3 products","vi":"Ra mắt 3 sản phẩm"}]',
+    '2025-02-01',
+    '2026-04-30',
+    '{"en":"Project: SSCRM","vi":"Project: SSCRM"}',
+    '[{"en":"Developed various end-to-end features, handling both frontend and backend tasks.","vi":"Developed various end-to-end features, handling both frontend and backend tasks."},
+	{"en":"Executed data migration between staging and production environments smoothly","vi":"Executed data migration between staging and production environments smoothly"},
+	{"en":"Implemented real-time chat and SMS messaging systems","vi":"Implemented real-time chat and SMS messaging systems"},
+	{"en":"Integrated data integration across multiple banking systems","vi":"Integrated data integration across multiple banking systems"}]',
     2
+  ),
+  (
+    '{"en":"MTI Technology","vi":"MTI Technology"}',
+    '{"en":"Full-stack Developer","vi":"Lập trình viên Full-stack"}',
+    '2021-03-01',
+    '2021-12-31',
+    '{"en":"Project: eKYC (Online Identity Verification for Banking)","vi":"Project: eKYC (Online Identity Verification for Banking)"}',
+    '[{"en":"Delivered end-to-end features across frontend, backend, database, and Azure for an online identity verification platform (face/ID verification + banking review workflow)","vi":"Delivered end-to-end features across frontend, backend, database, and Azure for an online identity verification platform (face/ID verification + banking review workflow)"},
+	{"en":"Contributed to system/database architecture and schema design; defined coding structure/conventions to improve maintainability","vi":"Contributed to system/database architecture and schema design; defined coding structure/conventions to improve maintainability"},
+	{"en":"Proposed and documented technical solutions; researched and applied new technologies to meet compliance and product requirements","vi":"Proposed and documented technical solutions; researched and applied new technologies to meet compliance and product requirements"}]',
+    3
+  ),
+  (
+    '{"en":"FPT Software","vi":"FPT Software"}',
+    '{"en":"Team Leader/Full-stack Developer","vi":"Team Leader/Lập trình viên Full-stack"}',
+    '2019-12-01',
+    '2021-01-01',
+    '{"en":"Project: BOSS ","vi":"Project: BOSS "}',
+    '[{"en":"Led development team","vi":"Led development team"},
+	{"en":"Implemented end-to-end functionalities across frontend, backend, and database layers","vi":"Implemented end-to-end functionalities across frontend, backend, and database layers"},
+	{"en":"Performed database analysis and contributed to schema design; defined coding structure and conventions to improve maintainabilit","vi":"Performed database analysis and contributed to schema design; defined coding structure and conventions to improve maintainabilit"},
+	{"en":"Mentor junior member","vi":"Mentor junior member"}]',
+    4
   )
 ON CONFLICT DO NOTHING;
 

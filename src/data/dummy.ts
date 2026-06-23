@@ -178,8 +178,8 @@ export const DUMMY_PROFILE: Profile = {
   full_name: { en: 'Tom', vi: 'Lê Mạnh Hùng' },
   job_title: { en: 'Full-stack Developer', vi: 'Full-stack Developer' },
   bio: {
-    en: 'I\'m a full-stack developer, ordinary person.',
-    vi: 'Tôi là một lập trình viên full-stack, người bình thường.',
+    en: 'Hi, I’m Hung! Some one call me Tom.\n Born in 1995 in Dak Lak, I’m a simple guy who loves ordinary things, yet carries a touch of rebellious individuality. I’m a dedicated gym bro and a massive Naruto fan. My ultimate life philosophy is simple: “Live decently and kindly, so that kindness will accidentally find its way back to you.” \n Professionally, I am a Full-stack Developer and Technical Lead with 7+ years of experience delivering enterprise applications across the SDLC. I specialize in .NET (ASP.NET Core), SQL Server, Azure Cloud, and system modernization. From legacy migration to microservices & event-driven architectures, I focus on building scalable, maintainable systems while leading small teams and collaborating with international stakeholders.',
+    vi: 'Hi, I’m Hung! Some one call me Tom.\n Born in 1995 in Dak Lak, I’m a simple guy who loves ordinary things, yet carries a touch of rebellious individuality. I’m a dedicated gym bro and a massive Naruto fan. My ultimate life philosophy is simple: “Live decently and kindly, so that kindness will accidentally find its way back to you.” \n Professionally, I am a Full-stack Developer and Technical Lead with 7+ years of experience delivering enterprise applications across the SDLC. I specialize in .NET (ASP.NET Core), SQL Server, Azure Cloud, and system modernization. From legacy migration to microservices & event-driven architectures, I focus on building scalable, maintainable systems while leading small teams and collaborating with international stakeholders.',
   },
   avatar_url: 'https://picsum.photos/seed/hung-portrait/800/1000',
   is_admin: true,

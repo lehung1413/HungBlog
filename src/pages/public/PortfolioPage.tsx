@@ -8,7 +8,9 @@ import { Seo } from '@/components/Seo'
 import { ExperienceTimeline } from '@/features/portfolio/ExperienceTimeline'
 import { SkillsMatrix } from '@/features/portfolio/SkillsMatrix'
 import { ProjectCard } from '@/features/home/FeaturedProjects'
+import { FormattedBio } from '@/components/content/FormattedBio'
 import { useLocalized } from '@/hooks/useLocale'
+import { splitBioParagraphs } from '@/lib/utils'
 import { getExperiences, getProfile, getProjects, getSkills } from '@/services/posts.service'
 
 export function PortfolioPage() {
@@ -25,7 +27,7 @@ export function PortfolioPage() {
 
   return (
     <>
-      <Seo title={t('nav.portfolio')} description={bio || t('nav.portfolio')} />
+      <Seo title={t('nav.portfolio')} description={splitBioParagraphs(bio)[0] ?? t('nav.portfolio')} />
       <SidebarLayout>
         <Box sx={{ mb: 5 }}>
           {profile?.avatar_url && (
@@ -50,11 +52,7 @@ export function PortfolioPage() {
               {localized(profile.job_title)}
             </Typography>
           )}
-          {bio && (
-            <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.9, fontSize: '1.05rem', whiteSpace: 'pre-line' }}>
-              {bio}
-            </Typography>
-          )}
+          {bio && <FormattedBio text={bio} />}
         </Box>
 
         <Box sx={{ mb: 6 }}>

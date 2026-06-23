@@ -42,3 +42,12 @@ export function getLocalizedContent(
   }
   return value[locale] ?? value.en ?? ''
 }
+
+/** Split bio text into paragraphs (supports real newlines and literal `\n` in DB). */
+export function splitBioParagraphs(text: string): string[] {
+  return text
+    .replace(/\\n/g, '\n')
+    .split(/\n+/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean)
+}

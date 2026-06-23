@@ -7,6 +7,7 @@ import { PageHeadline } from '@/components/layout/PageHeadline'
 import { SidebarLayout } from '@/components/layout/SidebarLayout'
 import { Seo } from '@/components/Seo'
 import { ContactForm, SocialLinks } from '@/features/contact/ContactForm'
+import { FormattedBio } from '@/components/content/FormattedBio'
 import { useLocalized } from '@/hooks/useLocale'
 import { getProfile, getSocialLinks } from '@/services/posts.service'
 
@@ -59,9 +60,11 @@ export function ContactPage() {
             <Typography variant="h5" sx={{ mb: 1, fontWeight: 700 }}>
               {t('contact.subtitle')}
             </Typography>
-            <Typography color="text.secondary" sx={{ mb: 4, lineHeight: 1.8 }}>
-              {profile ? localized(profile.bio) : t('contact.subtitle')}
-            </Typography>
+            <Box sx={{ mb: 4 }}>
+              {profile ? <FormattedBio text={localized(profile.bio)} /> : (
+                <Typography color="text.secondary" sx={{ lineHeight: 1.8 }}>{t('contact.subtitle')}</Typography>
+              )}
+            </Box>
             <Box sx={{ mb: 4 }}>
               <SocialLinks social={social} />
             </Box>
