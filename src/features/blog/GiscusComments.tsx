@@ -39,7 +39,7 @@ export function GiscusComments({ slug }: GiscusCommentsProps) {
   if (!repo) {
     return (
       <p className="text-center text-sm text-muted-foreground">
-        Comments are not configured. Set VITE_GISCUS_* environment variables.
+        Thanks for reading!
       </p>
     )
   }
