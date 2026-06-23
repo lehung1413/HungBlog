@@ -106,6 +106,8 @@
 .yaffo-masonry-item {
   break-inside: avoid;
   margin-bottom: 1.5rem;
+  display: inline-block;
+  width: 100%;
 }
 
 /* Featured boxes */

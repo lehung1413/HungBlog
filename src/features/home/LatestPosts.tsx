@@ -29,6 +29,8 @@ export function PostCard({ post, variant = 'grid' }: PostCardProps) {
         elevation={0}
         sx={{
           position: 'relative',
+          display: 'block',
+          width: '100%',
           aspectRatio: '4/5',
           overflow: 'hidden',
           textDecoration: 'none',
@@ -68,7 +70,8 @@ export function PostCard({ post, variant = 'grid' }: PostCardProps) {
       to={localizedPath(`/blog/${post.slug}`)}
       elevation={0}
       sx={{
-        height: '100%',
+        display: 'block',
+        width: '100%',
         textDecoration: 'none',
         '&:hover': { transform: 'translateY(-4px)' },
         '&:hover .post-image': { transform: 'scale(1.04)' },
@@ -130,13 +133,17 @@ export function LatestPosts({ posts }: LatestPostsProps) {
           {tr('common.viewAll')} →
         </Typography>
       </Stack>
-      <div className="yaffo-masonry">
-        {posts.map((post, i) => (
-          <div key={post.id} className="yaffo-masonry-item">
-            <PostCard post={post} variant={i % 3 === 0 ? 'overlay' : 'grid'} />
-          </div>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
+          gap: 3,
+        }}
+      >
+        {posts.map((post) => (
+          <PostCard key={post.id} post={post} variant="grid" />
         ))}
-      </div>
+      </Box>
     </Box>
   )
 }

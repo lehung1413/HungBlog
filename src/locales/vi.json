@@ -32,6 +32,8 @@
   },
   "home": {
     "hero": {
+      "label": "Triết lý sống",
+      "quote": "Hãy bắt đầu tin tưởng, bắt đầu mơ ước và tạo nên cuộc sống cùng con người mà bạn thực sự muốn trở thành.",
       "viewResume": "Xem CV",
       "readBlog": "Đọc Blog"
     },

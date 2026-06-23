@@ -335,6 +335,7 @@ export const DUMMY_HERO: HeroSettings = {
     vi: 'Lập trình viên full-stack tạo ra trải nghiệm web editorial tối.',
   },
   resume_url: '#',
+  image_url: 'https://picsum.photos/seed/hungblog-life-quote/1400/900',
 }
 
 export const DUMMY_SOCIAL: SocialLinks = {

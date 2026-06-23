@@ -114,6 +114,7 @@ export interface HeroSettings {
   title: LocalizedText
   description: LocalizedText
   resume_url?: string
+  image_url?: string
 }
 
 export interface DashboardStats {

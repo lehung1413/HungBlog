@@ -375,6 +375,7 @@ export async function getHeroSettings(): Promise<HeroSettings> {
         title: parseLocalized(value.title),
         description: parseLocalized(value.description),
         resume_url: (value.resume_url as string) ?? '',
+        image_url: (value.image_url as string) ?? undefined,
       }
     },
     DUMMY_HERO,

@@ -32,6 +32,8 @@
   },
   "home": {
     "hero": {
+      "label": "Life philosophy",
+      "quote": "Start believing, start dreaming and create the life and person that you really want to see.",
       "viewResume": "View Resume",
       "readBlog": "Read Blog"
     },
