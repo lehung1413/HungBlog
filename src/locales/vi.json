@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "portfolio": "Giới thiệu",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "admin": "Quản trị"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "retry": "Thử lại",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "create": "Tạo mới",
+    "search": "Tìm kiếm",
+    "noResults": "Không tìm thấy kết quả",
+    "viewAll": "Xem tất cả",
+    "readMore": "Đọc thêm",
+    "back": "Quay lại",
+    "logout": "Đăng xuất",
+    "login": "Đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "confirmDelete": "Bạn có chắc muốn xóa?",
+    "minsRead": "{{count}} phút đọc",
+    "demoDataNotice": "Chế độ xem trước — đang hiển thị dữ liệu mẫu. Kết nối Supabase và thêm dữ liệu thật để thay thế.",
+    "published": "Đã xuất bản",
+    "draft": "Bản nháp"
+  },
+  "home": {
+    "hero": {
+      "viewResume": "Xem CV",
+      "readBlog": "Đọc Blog"
+    },
+    "featuredProjects": "Dự án nổi bật",
+    "latestPosts": "Bài viết mới nhất",
+    "skillsSummary": "Kỹ năng",
+    "contactCta": "Liên hệ"
+  },
+  "portfolio": {
+    "experience": "Kinh nghiệm",
+    "skills": "Ma trận kỹ năng",
+    "projects": "Dự án",
+    "present": "Hiện tại"
+  },
+  "blog": {
+    "title": "Blog",
+    "searchPlaceholder": "Tìm bài viết...",
+    "allCategories": "Tất cả danh mục",
+    "allTags": "Tất cả thẻ",
+    "relatedPosts": "Bài viết liên quan"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Hãy kết nối với tôi",
+    "form": {
+      "name": "Họ tên",
+      "email": "Email",
+      "subject": "Chủ đề",
+      "message": "Tin nhắn",
+      "send": "Gửi tin nhắn",
+      "success": "Gửi tin nhắn thành công!",
+      "error": "Gửi tin nhắn thất bại"
+    }
+  },
+  "admin": {
+    "dashboard": "Bảng điều khiển",
+    "posts": "Bài viết",
+    "projects": "Dự án",
+    "settings": "Cài đặt",
+    "loginTitle": "Đăng nhập quản trị",
+    "stats": {
+      "totalPosts": "Tổng bài viết",
+      "totalProjects": "Tổng dự án",
+      "draftPosts": "Bản nháp",
+      "publishedPosts": "Đã xuất bản"
+    },
+    "postEditor": {
+      "title": "Tiêu đề",
+      "slug": "Slug",
+      "excerpt": "Tóm tắt",
+      "content": "Nội dung",
+      "thumbnail": "Ảnh thumbnail",
+      "category": "Danh mục",
+      "tags": "Thẻ",
+      "status": "Trạng thái",
+      "publishedAt": "Ngày xuất bản",
+      "preview": "Xem trước"
+    },
+    "projectEditor": {
+      "name": "Tên",
+      "slug": "Slug",
+      "description": "Mô tả",
+      "role": "Vai trò",
+      "techStack": "Công nghệ",
+      "github": "GitHub URL",
+      "demo": "Demo URL",
+      "featured": "Nổi bật",
+      "sortOrder": "Thứ tự",
+      "status": "Trạng thái"
+    },
+    "settingsForm": {
+      "heroTitle": "Tiêu đề Hero",
+      "heroDescription": "Mô tả Hero",
+      "resumeUrl": "URL CV",
+      "socialLinks": "Liên kết mạng xã hội"
+    }
+  },
+  "skills": {
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "database": "Cơ sở dữ liệu",
+    "devops": "DevOps",
+    "cloud": "Cloud",
+    "management": "Quản lý",
+    "soft_skills": "Kỹ năng mềm"
+  },
+  "projectStatus": {
+    "completed": "Hoàn thành",
+    "in_progress": "Đang thực hiện",
+    "archived": "Lưu trữ"
+  }
+}

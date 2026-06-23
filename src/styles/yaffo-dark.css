@@ -1,0 +1,226 @@
+/* Yaffo Dark theme layout utilities */
+
+.yaffo-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.yaffo-header-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.yaffo-header-row:last-child {
+  border-bottom: none;
+}
+
+.yaffo-nav-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.yaffo-nav-link:hover,
+.yaffo-nav-link.active {
+  color: #fff;
+}
+
+.yaffo-logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.yaffo-logo:hover {
+  color: #0cb1c7;
+}
+
+.yaffo-headline {
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 2.5rem;
+}
+
+.yaffo-headline__title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.yaffo-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.yaffo-breadcrumbs a {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+}
+
+.yaffo-breadcrumbs a:hover {
+  color: #0cb1c7;
+}
+
+.yaffo-breadcrumbs-sep::before {
+  content: '/';
+  margin-right: 0.75rem;
+  opacity: 0.4;
+}
+
+.yaffo-breadcrumbs .current {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Masonry blog grid like nebotheme */
+.yaffo-masonry {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .yaffo-masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .yaffo-masonry {
+    column-count: 3;
+  }
+}
+
+.yaffo-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+/* Featured boxes */
+.yaffo-featured-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 768px) {
+  .yaffo-featured-boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Sidebar widgets */
+.yaffo-widget {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.yaffo-widget-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.25rem;
+}
+
+.yaffo-widget-title span {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0cb1c7;
+}
+
+/* Back to top */
+.yaffo-back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+}
+
+.yaffo-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.yaffo-back-to-top:hover {
+  background: #0cb1c7;
+  border-color: #0cb1c7;
+}
+
+/* Post card category badge */
+.yaffo-category-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+}
+
+.yaffo-post-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 0.75rem;
+}
+
+/* Footer */
+.yaffo-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.yaffo-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.yaffo-footer-nav a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+
+.yaffo-footer-nav a:hover,
+.yaffo-footer-nav a.active {
+  color: #fff;
+}
