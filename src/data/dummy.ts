@@ -38,14 +38,14 @@ export const DUMMY_POSTS: Post[] = [
     },
     slug: 'building-modern-portfolio',
     excerpt: {
-      en: 'How I designed HungBlog with a dark editorial theme inspired by Yaffo.',
-      vi: 'Cách tôi thiết kế HungBlog với theme editorial tối lấy cảm hứng từ Yaffo.',
+      en: 'How I designed Hung\'s Blog with a dark editorial theme inspired by Yaffo.',
+      vi: 'Cách tôi thiết kế Hung\'s Blog với theme editorial tối lấy cảm hứng từ Yaffo.',
     },
     content: {
-      en: '# Building HungBlog\n\nA walkthrough of architecture, theming, and CMS integration.\n\n```tsx\n<ThemeProvider theme={darkTheme}>\n  <App />\n</ThemeProvider>\n```',
-      vi: '# Xây dựng HungBlog\n\nHướng dẫn kiến trúc, theme và tích hợp CMS.',
+      en: '# Building Hung\'s Blog\n\nA walkthrough of architecture, theming, and CMS integration.\n\n```tsx\n<ThemeProvider theme={darkTheme}>\n  <App />\n</ThemeProvider>\n```',
+      vi: '# Xây dựng Hung\'s Blog\n\nHướng dẫn kiến trúc, theme và tích hợp CMS.',
     },
-    thumbnail_url: 'https://picsum.photos/seed/hungblog-hero/1400/900',
+    thumbnail_url: 'https://picsum.photos/seed/hungs-blog-hero/1400/900',
     category_id: cat('tech').id,
     status: 'published',
     reading_time_minutes: 8,
@@ -256,14 +256,14 @@ export const DUMMY_SKILLS: Skill[] = [
 export const DUMMY_PROJECTS: Project[] = [
   {
     id: 'dummy-proj-1',
-    name: { en: 'HungBlog', vi: 'HungBlog' },
-    slug: 'hungblog',
+    name: { en: 'Hung\'s Blog', vi: 'Hung\'s Blog' },
+    slug: 'hungs-blog',
     description: {
       en: 'Personal portfolio and bilingual blog with admin CMS, inspired by Yaffo Dark theme.',
       vi: 'Portfolio cá nhân và blog song ngữ với CMS admin, lấy cảm hứng từ theme Yaffo Dark.',
     },
-    thumbnail_url: 'https://picsum.photos/seed/project-hungblog/900/600',
-    github_url: 'https://github.com',
+    thumbnail_url: 'https://picsum.photos/seed/project-hungs-blog/900/600',
+    github_url: 'https://github.com/lehung1413',
     demo_url: null,
     role: { en: 'Creator & Lead Developer', vi: 'Người tạo & Lead Developer' },
     tech_stack: ['React', 'TypeScript', 'MUI', 'Supabase', 'Vercel'],

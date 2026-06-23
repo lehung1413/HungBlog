@@ -1,47 +1,129 @@
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
-import MuiSelect from '@mui/material/Select'
+import MuiSelect, { type SelectChangeEvent } from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
-import { createContext, useContext } from 'react'
+import { Children, isValidElement, type ReactElement, type ReactNode } from 'react'
 
-interface SelectContextValue {
+interface SelectItemProps {
+  value: string
+  children: ReactNode
+}
+
+interface SelectValueProps {
+  placeholder?: string
+}
+
+function isSelectItem(child: ReactNode): child is ReactElement<SelectItemProps> {
+  return isValidElement(child) && child.type === SelectItem
+}
+
+interface SelectTriggerProps {
+  children?: ReactNode
+  className?: string
+}
+
+interface SelectContentProps {
+  children: ReactNode
+}
+
+interface SelectLabelProps {
+  children: ReactNode
+}
+
+function collectSelectParts(children: ReactNode) {
+  let items: ReactElement<SelectItemProps>[] = []
+  let placeholder: string | undefined
+  let label: ReactNode
+  let className: string | undefined
+
+  Children.forEach(children, (child) => {
+    if (!isValidElement<SelectTriggerProps | SelectContentProps | SelectLabelProps>(child)) return
+
+    if (child.type === SelectTrigger) {
+      const props = child.props as SelectTriggerProps
+      className = props.className
+      Children.forEach(props.children, (grandChild) => {
+        if (isValidElement<SelectValueProps>(grandChild) && grandChild.type === SelectValue) {
+          placeholder = grandChild.props.placeholder
+        }
+      })
+    }
+
+    if (child.type === SelectContent) {
+      const props = child.props as SelectContentProps
+      Children.forEach(props.children, (item) => {
+        if (isSelectItem(item)) items.push(item)
+      })
+    }
+
+    if (child.type === SelectLabel) {
+      label = (child.props as SelectLabelProps).children
+    }
+  })
+
+  return { items, placeholder, label, className }
+}
+
+export function Select({
+  value,
+  onValueChange,
+  children,
+}: {
   value?: string
   onValueChange?: (v: string) => void
-  label?: string
-}
+  children: ReactNode
+}) {
+  const { items, placeholder, label, className } = collectSelectParts(children)
+  const labelId = label ? 'select-label' : undefined
 
-const SelectContext = createContext<SelectContextValue>({})
+  const handleChange = (event: SelectChangeEvent) => {
+    onValueChange?.(event.target.value)
+  }
 
-export function Select({ value, onValueChange, children }: { value?: string; onValueChange?: (v: string) => void; children: React.ReactNode }) {
+  const renderValue = (selected: string) => {
+    if (!selected) return placeholder ?? '—'
+    const match = items.find((item) => item.props.value === selected)
+    return match?.props.children ?? selected
+  }
+
   return (
-    <SelectContext.Provider value={{ value, onValueChange }}>
-      <FormControl fullWidth size="small">{children}</FormControl>
-    </SelectContext.Provider>
+    <FormControl fullWidth size="small" className={className}>
+      {label && <InputLabel id={labelId}>{label}</InputLabel>}
+      <MuiSelect
+        labelId={labelId}
+        label={label ? String(label) : undefined}
+        value={value ?? ''}
+        onChange={handleChange}
+        displayEmpty
+        renderValue={renderValue}
+      >
+        {items.map((item) => (
+          <MenuItem key={item.props.value} value={item.props.value}>
+            {item.props.children}
+          </MenuItem>
+        ))}
+      </MuiSelect>
+    </FormControl>
   )
 }
 
-export function SelectTrigger({ children, className }: { children?: React.ReactNode; className?: string }) {
-  const { value, onValueChange } = useContext(SelectContext)
-  return (
-    <MuiSelect value={value ?? ''} onChange={(e) => onValueChange?.(e.target.value as string)} displayEmpty className={className}>
-      {children}
-    </MuiSelect>
-  )
+/** Marker components — parsed by Select, not rendered directly */
+export function SelectTrigger(_props: { children?: ReactNode; className?: string }) {
+  return null
 }
 
-export function SelectValue({ placeholder }: { placeholder?: string }) {
-  const { value } = useContext(SelectContext)
-  return <>{value || placeholder}</>
+export function SelectValue(_props: SelectValueProps) {
+  return null
 }
 
-export function SelectContent({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export function SelectContent(_props: { children: ReactNode }) {
+  return null
 }
 
-export function SelectItem({ value, children }: { value: string; children: React.ReactNode }) {
-  return <MenuItem value={value}>{children}</MenuItem>
+export function SelectItem(_props: SelectItemProps) {
+  return null
 }
 
-export function SelectLabel({ children }: { children: React.ReactNode }) {
-  return <InputLabel>{children}</InputLabel>
+export function SelectLabel(_props: SelectLabelProps) {
+  return null
 }

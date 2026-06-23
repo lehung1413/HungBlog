@@ -61,7 +61,7 @@ export function Footer() {
           </Stack>
 
           <Typography variant="body2" color="text.secondary" sx={{ letterSpacing: '0.04em' }}>
-            © {new Date().getFullYear()} HungBlog. All rights reserved.
+            © {new Date().getFullYear()} Hung's Blog. All rights reserved.
           </Typography>
 
           <nav className="yaffo-footer-nav" aria-label="Footer">
@@ -78,7 +78,7 @@ export function Footer() {
           </nav>
 
           <Link to={localizedPath('/')} className="yaffo-logo" style={{ fontSize: '1.5rem' }}>
-            HungBlog
+            Hung's Blog
           </Link>
         </Stack>
       </WideContainer>

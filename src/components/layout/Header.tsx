@@ -105,7 +105,7 @@ export function Header() {
 
               <Stack direction="row" sx={{ alignItems: 'baseline', gap: 2 }}>
                 <Link to={localizedPath('/')} className="yaffo-logo">
-                  HungBlog
+                  Hung's Blog
                 </Link>
                 {pageTitle && !isHome && (
                   <Box
@@ -156,7 +156,7 @@ export function Header() {
               </Stack>
 
               <Link to={localizedPath('/')} className="yaffo-logo" style={{ fontSize: '1.25rem' }}>
-                HungBlog
+                Hung's Blog
               </Link>
 
               <Stack direction="row" sx={{ alignItems: 'center', gap: 0.25, flex: 1, justifyContent: 'flex-end' }}>
@@ -196,7 +196,7 @@ export function Header() {
       >
         <Box sx={{ p: 3 }}>
           <Link to={localizedPath('/')} className="yaffo-logo" onClick={() => setDrawerOpen(false)}>
-            HungBlog
+            Hung's Blog
           </Link>
         </Box>
         <Divider />

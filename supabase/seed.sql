@@ -2,32 +2,32 @@
 
 INSERT INTO categories (slug, name, sort_order) VALUES
   ('tech', '{"en":"Technology","vi":"Công nghệ"}', 1),
-  ('career', '{"en":"Career","vi":"Sự nghiệp"}', 2),
+  ('lifestyle', '{"en":"Lifestyle","vi":"Phong cách sống"}', 2),
   ('tutorial', '{"en":"Tutorial","vi":"Hướng dẫn"}', 3)
 ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO tags (slug, name) VALUES
   ('react', '{"en":"React","vi":"React"}'),
   ('typescript', '{"en":"TypeScript","vi":"TypeScript"}'),
-  ('supabase', '{"en":"Supabase","vi":"Supabase"}'),
+  ('lifestyle', '{"en":"Life Style","vi":"Life Style"}'),
   ('devops', '{"en":"DevOps","vi":"DevOps"}')
 ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO settings (key, value) VALUES
-  ('hero', '{"title":{"en":"Hi, I''m Hung","vi":"Xin chào, tôi là Hung"},"description":{"en":"Full-stack developer passionate about building elegant web experiences.","vi":"Lập trình viên full-stack đam mê xây dựng trải nghiệm web tinh tế."},"resume_url":""}'),
-  ('social', '{"github":"","linkedin":"","facebook":"","email":""}')
+  ('hero', '{"title":{"en":"Hi, I''m Hung","vi":"Xin chào, tôi là Hung"},"description":{"en":"Full-stack developer, ordinary person.","vi":"Lập trình viên full-stack, người bình thường."},"resume_url":""}'),
+  ('social', '{"github":"https://github.com/lehung1413","linkedin":"https://www.linkedin.com/in/lehung1413/","facebook":"https://www.facebook.com/hungnaruto6613","email":"lehung.1413@gmail.com"}')
 ON CONFLICT (key) DO NOTHING;
 
 INSERT INTO skills (skill_group, name, proficiency, sort_order) VALUES
-  ('backend', '{"en":"Node.js","vi":"Node.js"}', 85, 1),
-  ('backend', '{"en":".NET","vi":".NET"}', 80, 2),
-  ('frontend', '{"en":"React","vi":"React"}', 90, 1),
+  ('backend', '{"en":".NET","vi":".NET"}', 80, 1),
+  ('frontend', '{"en":"React","vi":"React"}', 70, 1),
   ('frontend', '{"en":"TypeScript","vi":"TypeScript"}', 88, 2),
-  ('database', '{"en":"PostgreSQL","vi":"PostgreSQL"}', 82, 1),
-  ('devops', '{"en":"Docker","vi":"Docker"}', 75, 1),
+  ('database', '{"en":"SQL Server","vi":"SQL Server"}', 82, 1),
+  ('devops', '{"en":"Azure DevOps","vi":"Azure DevOps"}', 75, 1),
   ('cloud', '{"en":"Azure","vi":"Azure"}', 70, 1),
   ('management', '{"en":"Agile/Scrum","vi":"Agile/Scrum"}', 78, 1),
-  ('soft_skills', '{"en":"Communication","vi":"Giao tiếp"}', 90, 1)
+  ('soft_skills', '{"en":"Communication","vi":"Giao tiếp"}', 90, 1),
+  ('other', '{"en":"Gym Bro","vi":"Gym Bro"}', 90, 1)
 ON CONFLICT DO NOTHING;
 
 INSERT INTO experiences (company_name, position, start_date, end_date, description, achievements, sort_order) VALUES
@@ -90,7 +90,7 @@ SELECT
   '{"en":"Welcome to HungBlog","vi":"Chào mừng đến HungBlog"}',
   'welcome-to-hungblog',
   '{"en":"My first blog post about this portfolio site.","vi":"Bài viết đầu tiên về trang portfolio này."}',
-  '{"en":"# Welcome\n\nThis is my personal blog built with **React**, **Supabase**, and **TailwindCSS**.\n\n```typescript\nconst hello = \"world\"\nconsole.log(hello)\n```\n\n> Building in public, one commit at a time.","vi":"# Chào mừng\n\nĐây là blog cá nhân được xây dựng với **React**, **Supabase**, và **TailwindCSS**."}',
+  '{"en":"# Welcome\n\nThis is my personal blog for fun.\n\n```typescript\nconst hello = \"world\"\nconsole.log(hello)\n```\n\n> Building in public, one commit at a time.","vi":"# Chào mừng\n\nĐây là blog cá nhân mình làm vì quá rảnh."}',
   c.id,
   'published',
   3,
